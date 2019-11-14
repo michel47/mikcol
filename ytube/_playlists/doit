@@ -1,5 +1,6 @@
 
 
+(cd ../_data/lists; ls -1 *-keys.yml) > list.txt
 for f in $(cat list.txt); do
 bn="${f%.*}"
 md="${bn}.md"

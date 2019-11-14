@@ -3,6 +3,7 @@
 2gether-keys.yml
 4th-evolution-keys.yml
 80s-keys.yml
+activism-keys.yml
 ads-keys.yml
 AI-keys.yml
 all-music-keys.yml
@@ -52,8 +53,10 @@ geek-keys.yml
 gender-keys.yml
 global-agenda-keys.yml
 gloque-keys.yml
+god-keys.yml
 governance-keys.yml
 gradual-keys.yml
+gurus-keys.yml
 hackers-keys.yml
 hard-keys.yml
 healing-keys.yml
@@ -71,10 +74,10 @@ meme-keys.yml
 memo-keys.yml
 metal-keys.yml
 MikCol-keys.yml
-mikcol-music-keys.yml
 MikCol-music-keys.yml
 milonga-keys.yml
 misc-keys.yml
+mkl-music-keys.yml
 mobilapp-keys.yml
 music-90s-keys.yml
 music-keys.yml
@@ -97,6 +100,7 @@ politics-keys.yml
 propaganda-keys.yml
 public-talk-keys.yml
 quantum-keys.yml
+references-keys.yml
 relationship-keys.yml
 removed-keys.yml
 ricetm-keys.yml
