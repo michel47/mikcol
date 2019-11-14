@@ -1,0 +1,130 @@
+<!DOCTYPE html><head>
+<meta charset="utf-8"/>
+<script src="https://cdn.jsdelivr.net/gh/iglake/js@1.7/dist/favicon.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@master/css/style.css" rel="stylesheet" type="text/css"/>
+<!-- link href="../style.css" rel="stylesheet" type="text/css"/ -->
+
+<script>
+{% assign vlist = site.data.lists[page.list] %}
+var list = [ "{{vlist[-1]}}",{% for vid in vlist limit:99 %}"{{vid}}",{%endfor%}"{{vlist[0]}}" ];
+</script>
+</head><body>
+<style src="../style.css"></style>
+<div class="first content">
+<h2>{{page.name}}</h2>
+
+{{page.list}} : {{page.description}}
+</div>
+
+<div class="content">
+{{content}}
+</div>
+
+<br><div class="content">
+<h2> Samples ... </h2>
+<ol>
+{% for vid in vlist limit:11 %}
+{% if vid contains "Qm" %}<li> vid: <a href="https://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
+{% else %}<li> vid: <a href="https://www.youtube.com/watch?v={{vid}}">{{vid}}</a>{% endif %}{% endfor %}
+</ol>
+</div>
+
+<script>
+ var player;
+ var origin = document.location.origin;
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player',{
+          frameborder: '3px',
+playerVars: {
+            theme: "light",
+            modestbranding: 1, // No You Tube logo on control bar
+            autoplay: 1,
+            controls: 2,
+            loop: 1,
+            /* 
+            mute: 1,
+            listType: 'list',
+            playlist: [ "{{vlist[-1]}}",{% for vid in vlist limit:4 %}"{{vid}}",{%endfor%}"{{vlist[0]}}" ],
+            playlist: "{{vlist | slice: 0,7 | join: ","}}",
+            playlist: list,
+            */
+            enablejsapi: 1,
+            volume: '50%',
+            origin: origin
+},
+events: {
+   'onStateChange': onPlayerStateChange('player'),
+   'onReady': onPlayerReady
+          }
+
+});
+}
+
+function onPlayerStateChange(id) {
+   var f = function (event) {
+    changeBorderColor(id,event.data);
+    if (event.data == YT.PlayerState.ENDED) {
+      console.log('ended')
+    } else if (event.data == YT.PlayerState.CUED) {
+      console.log('cued');
+    } else if (event.data = YT.PlayerState.UNSTARTED) {
+      console.log('unstarted');
+    } else {
+      console.log(event)
+    }
+
+   };
+   return f;
+}
+function changeBorderColor(player,playerStatus) {
+    var color;
+    if (playerStatus == -1) {
+      color = "#37474F"; // unstarted = gray
+    } else if (playerStatus == 0) {
+      color = "#FFFF00"; // ended = yellow
+    } else if (playerStatus == 1) {
+      color = "#33FF1E"; // playing = green
+    } else if (playerStatus == 2) {
+      color = "#DD2C00"; // paused = red
+    } else if (playerStatus == 3) {
+      color = "#AA00FF"; // buffering = purple
+    } else if (playerStatus == 5) {
+      color = "#EF6D00"; // video cued = orange
+    }
+    if (color) {
+      document.getElementById(player).style.borderColor = color;
+    }
+}
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+  event.target.loadPlaylist({
+            playlist: "{{vlist | join: ","}}"
+  });
+  /*
+            playlist: [ "{{vlist[-1]}}"{% for vid in vlist limit:98 %},"{{vid | replace: /\?.*/,""}}"{%endfor%} ]
+            playlist: "{{vlist | slice: 7,250 | join: ","}}"
+            */
+  console.log(list);
+}
+function onPlayerReadyf(list) {
+ var f = function (event) {
+    event.target.playVideo();
+    /* event.target.loadPlaylist({playlist: list, listType:'list'}); */
+ };
+ return f;
+}
+
+</script>
+<br><div class="first">
+{% for vid in site.data.lists[page.list] %}
+{% if vid contains "Qm" %} <a href="http://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
+{% else %}<a target="_ytube" href="https://youtu.be/{{vid}}"><img title="#{{forloop.index}}" alt="{{vid}}" src="https://i.ytimg.com/vi/{{vid}}/default.jpg"></a>{% endif %}{% endfor %}
+</div>
+
+</body>

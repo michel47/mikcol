@@ -1,0 +1,23 @@
+
+
+for f in $(cat list.txt); do
+bn="${f%.*}"
+md="${bn}.md"
+if [ 1 -o ! -e $md ]; then
+echo $md
+cat > $md <<EOF
+--- 
+layout: default
+name: $bn
+description: videos for $bn list
+list: $bn
+---
+
+<div class="player">
+<div id="player"><!-- "https://www.youtube.com/watch?v={{site.data.lists[page.list][0]}}" --></div>
+</div>
+
+EOF
+fi
+done
+

@@ -1,0 +1,25 @@
+<style>
+div { max-width: 840px; }
+div.content > div.player {
+  background-color: red;
+}
+.player {
+  position: relative;
+  width: calc(100% - 2rem);
+  padding-bottom: 56.25%;
+  height 0;
+}
+.player iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#player {
+  border: 1px red solid;
+  max-height: 96vh;
+  border: 4px blue dotted;
+  padding: 1rem;
+}

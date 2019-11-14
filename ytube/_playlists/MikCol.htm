@@ -1,0 +1,31 @@
+---
+---
+<meta charset="utf8"/>
+<style>
+.player {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.player iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#player {
+  border: 1px red solid;
+  height: 96vh;
+}
+</style>
+
+{% for ytid in site.data.playlists.MikCol-music-keys %}
+{% include ytPlayer.html id=ytid n=forloop.index %}
+{% endfor %}
+
+
+<!--
+{% for ytid in site.data.playlists.test-keys limit:3 %}{% include IFPlayer.html id=ytid %}{% endfor %}
+-->

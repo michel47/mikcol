@@ -1,0 +1,15 @@
+
+
+#paginate: 5
+#paginate_path: "/page:num/"
+
+baseurl: '/GITrepo/michel47/ytube/_site'
+url: http://ocean:8088
+
+collections:
+ playlists:
+  output: 1
+
+
+plugins:
+  - jekyll-paginate
