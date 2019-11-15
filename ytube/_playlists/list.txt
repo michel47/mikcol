@@ -3,6 +3,7 @@
 2gether-keys.yml
 4th-evolution-keys.yml
 80s-keys.yml
+abundance-keys.yml
 activism-keys.yml
 ads-keys.yml
 AI-keys.yml
