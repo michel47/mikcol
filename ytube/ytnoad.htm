@@ -6,9 +6,11 @@ usage: https://{{site.data.ipfs.bafy}}.cf-ipfs.com/#-ar9vsmFhJU
 ---
 <!DOCTYPE html>
 <head>
+{% if site.data.videos %}
 {% assign hours= site.time | date: "%H" | plus: 103 %}
 {% assign random = page.title.size | plus: hours | modulo: site.data.videos.id.size %}
 {% assign videoid = site.data.videos.id[random] %}
+{% endif %}
 <meta charset="utf8"/>
 <script src="https://cdn.jsdelivr.net/gh/iglake/js@1.7/dist/favicon.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@master/css/style.css" rel="stylesheet" type="text/css"/>

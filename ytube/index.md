@@ -3,13 +3,17 @@ layout: default
 list: references-keys
 ---
 {% assign hours= site.time | date: "%H" | plus: 137 %}
+{% if site.data.list %}
 {% assign random = page.title.size | plus: hours | modulo: site.data.lists[page.list].size %}
 {% assign videoid = site.data.lists[page.list][random] %}
 <!-- {{hours}} {{random}}/{{site.data.lists[page.list].size}} -->
+{% endif %}
 
 ### youtube w/o ads [ytnoad.htm](ytnoad.htm)
 *[{{site.data.ipfs.qm}}](https://{{site.data.ipfs.bafy}}.ipfs.dweb.link/ytnoad.htm#{{videoid}})* ({{random}})
 
+
+{% if site.playlists %}
 ## A few of my ytube playlists :
 
 1. [messages](playlists/messages-keys.html)
@@ -32,6 +36,8 @@ list: references-keys
    [mycelium](playlists/god-keys.html), &amp; [references](playlists/references-keys.html)
 11. [...](playlists/listen-later-keys.html)
 12. other [playlists](playlists.html)
+
+{% endif %}
 
 
 ### json :
