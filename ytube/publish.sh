@@ -3,6 +3,10 @@
 jekyll build
 eval $(cat _data/ipfs.yml | eyml)
 pv=$qm
+cd _playlists
+sh doit
+cd ..
+git add _playlists/
 qm=$(ipfs add -Q -r _site)
 yt=$(ipfs add -Q -w _site/ytnoad.htm _site/style.css)
 bafy=$(ipfs cid base32 $yt)
