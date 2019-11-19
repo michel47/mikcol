@@ -111,6 +111,7 @@ robots-keys.yml
 sacred-keys.yml
 science-keys.yml
 sci-fi-keys.yml
+security-keys.yml
 seen-keys.yml
 sensual-keys.yml
 seo-keys.yml
