@@ -23,7 +23,7 @@ var list = [ "{{vlist[-1]}}",{% for vid in vlist limit:99 %}"{{vid}}",{%endfor%}
 <br><div class="content">
 <h2> Samples ... </h2>
 <ol>
-{% for vid in vlist limit:11 %}
+{% for vid in vlist limit:28 %}
 {% if vid contains "Qm" %}<li> vid: <a href="https://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
 {% else %}<li> vid: <a href="https://www.youtube.com/watch?v={{vid}}">{{vid}}</a>{% endif %}{% endfor %}
 </ol>
@@ -107,7 +107,7 @@ function onPlayerReady(event) {
             playlist: "{{vlist | join: ","}}"
   });
   /*
-            playlist: [ "{{vlist[-1]}}"{% for vid in vlist limit:98 %},"{{vid | replace: /\?.*/,""}}"{%endfor%} ]
+            playlist: [ "{{vlist[-1]}}"{% for vid in vlist limit:98 %},"{{vid | replace: '?.*',''}}"{%endfor%} ]
             playlist: "{{vlist | slice: 7,250 | join: ","}}"
             */
   console.log(list);
