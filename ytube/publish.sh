@@ -18,3 +18,4 @@ pv: $pv
 yt: $yt
 ...
 EOF
+git add _data/ipfs.yml

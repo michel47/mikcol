@@ -30,6 +30,7 @@ conspiracy-keys.yml
 corruption-keys.yml
 cortinas-keys.yml
 crypto-keys.yml
+cyberwar-keys.yml
 danceable-keys.yml
 dark-side-keys.yml
 deepweb-keys.yml
@@ -118,6 +119,7 @@ seo-keys.yml
 sex-keys.yml
 sharon-keys.yml
 shuffle-keys.yml
+socialtech-keys.yml
 societies-keys.yml
 solutions-keys.yml
 spiritual-keys.yml
