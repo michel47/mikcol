@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<!--
 ---
 channel: UCEAS25i5eBVpQxzlCDALrVA
 list: UUEAS25i5eBVpQxzlCDALrVA
 # ipfs add -w -Q --cid-version=1 ytnoad.htm style.css
 usage: https://{{site.data.ipfs.bafy}}.cf-ipfs.com/#-ar9vsmFhJU
 ---
--->
+<!DOCTYPE html>
 <head>
+{% assign hours= site.time | date: "%H" | plus: 103 %}
+{% assign random = page.title.size | plus: hours | modulo: site.data.videos.id.size %}
+{% assign videoid = site.data.videos.id[random] %}
 <meta charset="utf8"/>
 <script src="https://cdn.jsdelivr.net/gh/iglake/js@1.7/dist/favicon.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@master/css/style.css" rel="stylesheet" type="text/css"/>
@@ -20,21 +21,37 @@ usage: https://{{site.data.ipfs.bafy}}.cf-ipfs.com/#-ar9vsmFhJU
 }
 </style>
 </head>
-<title> Watch YouTube Video w/o Advertisements : %videoid%</title>
+<title> Watch YouTube Video w/o Advertisements : {{videoid}}</title>
 
 <body>
+<pre>
+hours: {{hours}}
+modulo: {{site.data.videos.id.size}}
+random: {{random}}
+video: {{site.data.videos.id[random]}}
+list: {{ site.data.videos.id | join: ', '  }}
+</pre>
+
 <div class="player content">
 <div id=player> Watch YouTube Video w/o Advertisements !</div>
 <br clear="all"/>
 </div>
 <!-- OnEnter : see [*](https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp) -->
 <div>search: <input type="text" name="query" id="query" value="" OnChange="searchVideo(this.value);"></div>
+<br>--&nbsp;<br><a href=https://{{site.data.ipfs.bafy}}.cf-ipfs.com/ytnoad.htm#{{videoid}}>https://{{site.data.ipfs.bafy}}.cf-ipfs.com/ytnoad.htm#{{videoid}}</a
 </body>
 
 <script>
  var origin = document.location.origin;
- var fragment = document.location.hash.substring(1);
- document.getElementById('query').value = fragment;
+ let hash = document.location.hash
+ var fragment
+ if (typeof(hash) == 'undefined' || hash == '') {
+   fragment = '{{site.data.videos.id[random]}}'
+ } else {
+   fragment = hash.substring(1);
+ }
+      document.getElementById('query').value = fragment;
+      console.log('fragment: "'+fragment+'" {{random}} : {{videoid}}')
       var tag = document.createElement('script');
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];

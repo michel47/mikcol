@@ -2,11 +2,17 @@
 layout: default
 list: references-keys
 ---
+{% assign hours= site.time | date: "%H" | plus: 137 %}
+{% assign random = page.title.size | plus: hours | modulo: site.data.lists[page.list].size %}
+{% assign videoid = site.data.lists[page.list][random] %}
+<!-- {{hours}} {{random}}/{{site.data.lists[page.list].size}} -->
 
-# youtube w/o ads [ytnoad.htm](ytnoad.htm)
+### youtube w/o ads [ytnoad.htm](ytnoad.htm)
+*[{{site.data.ipfs.qm}}](https://{{site.data.ipfs.bafy}}.ipfs.dweb.link/ytnoad.htm#{{videoid}})* ({{random}})
 
- A few of my ytube playlists :
+## A few of my ytube playlists :
 
+1. [messages](playlists/messages-keys.html)
 1. [4th evolution](playlists/4th-evolution-keys.html)
 1. [GC-Bank](playlists/gcbank-keys.html), [M4GC](playlists/m4gc-keys.html), [ipfs](playlists/ipfs-keys.html)
 1. [blockchain](playlists/blockchain-keys.html) &amp; [crypto](playlists/crypto-keys.html)
@@ -18,8 +24,16 @@ list: references-keys
 6. [Meditation music](playlists/medit-keys.html)
 7. [Wuotai music](playlists/wuotai-music-keys.html) (for [WuoTai](playlists/wuotai-keys.html) practice)
 8. [healing](playlists/healing-keys.html) &amp; [Quanta](playlists/quantum-keys.html)
-8. [gurus](playlists/gurus-keys.html),
+9. [technologies](playlists/techno-keys.html) &amp;
+   [security](playlists/security-keys.html)
+
+10. [gurus](playlists/gurus-keys.html),
    [water](playlists/water-keys.html),
    [mycelium](playlists/god-keys.html), &amp; [references](playlists/references-keys.html)
-9. ...
-10. other [playlists](playlists.html)
+11. [...](playlists/listen-later-keys.html)
+12. other [playlists](playlists.html)
+
+
+### json :
+
+* [view-later.json](view-later.json)

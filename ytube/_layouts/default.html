@@ -3,15 +3,15 @@
 <script src="https://cdn.jsdelivr.net/gh/iglake/js@1.7/dist/favicon.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@master/css/style.css" rel="stylesheet" type="text/css"/>
 <!-- link href="../style.css" rel="stylesheet" type="text/css"/ -->
-
 <script>
 {% assign vlist = site.data.lists[page.list] %}
+{% if page.path contains "/" %}{% assign dot = '../' %}{% else %}{% assign dot = '' %}{% endif %}
 var list = [ "{{vlist[-1]}}",{% for vid in vlist limit:99 %}"{{vid}}",{%endfor%}"{{vlist[0]}}" ];
 </script>
 </head><body>
 <style src="../style.css"></style>
 <div class="first content">
-<h2>{{page.name}}</h2>
+<h2>{{page.name}} </h2>
 
 {{page.list}} : {{page.description}}
 </div>
@@ -20,12 +20,18 @@ var list = [ "{{vlist[-1]}}",{% for vid in vlist limit:99 %}"{{vid}}",{%endfor%}
 {{content}}
 </div>
 
+<br><div class="first">
+{% for vid in site.data.lists[page.list] %}
+{% if vid contains "Qm" %} <a href="http://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
+{% else %}<a target="top" href="{{dot}}ytnoad.htm#{{vid}}"><img title="#{{forloop.index}}" alt="{{vid}}" src="https://i.ytimg.com/vi/{{vid}}/default.jpg"></a>{% endif %}{% endfor %}
+</div>
+
 <br><div class="content">
 <h2> Samples ... </h2>
 <ol>
 {% for vid in vlist limit:28 %}
 {% if vid contains "Qm" %}<li> vid: <a href="https://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
-{% else %}<li> vid: <a href="https://www.youtube.com/watch?v={{vid}}">{{vid}}</a>{% endif %}{% endfor %}
+{% else %}<li> vid: <a href="{{dot}}ytnoad.htm#{{vid}}">{{vid}}</a> (<a target="_ytube" href="https://www.youtube.com/watch?v={{vid}}">yt</a>){% endif %}{% endfor %}
 </ol>
 </div>
 
@@ -46,8 +52,8 @@ playerVars: {
             autoplay: 1,
             controls: 2,
             loop: 1,
+            mute: 0,
             /* 
-            mute: 1,
             listType: 'list',
             playlist: [ "{{vlist[-1]}}",{% for vid in vlist limit:4 %}"{{vid}}",{%endfor%}"{{vlist[0]}}" ],
             playlist: "{{vlist | slice: 0,7 | join: ","}}",
@@ -121,10 +127,4 @@ function onPlayerReadyf(list) {
 }
 
 </script>
-<br><div class="first">
-{% for vid in site.data.lists[page.list] %}
-{% if vid contains "Qm" %} <a href="http://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
-{% else %}<a target="_ytube" href="https://youtu.be/{{vid}}"><img title="#{{forloop.index}}" alt="{{vid}}" src="https://i.ytimg.com/vi/{{vid}}/default.jpg"></a>{% endif %}{% endfor %}
-</div>
-
 </body>
