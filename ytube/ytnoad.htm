@@ -26,12 +26,12 @@ usage: https://{{site.data.ipfs.bafy}}.cf-ipfs.com/#-ar9vsmFhJU
 <title> Watch YouTube Video w/o Advertisements : {{videoid}}</title>
 
 <body>
+<!-- list: {{ site.data.videos.id | join: ', '  }} -->
+<!-- hours: {{hours}} -->
 <pre>
-hours: {{hours}}
 modulo: {{site.data.videos.id.size}}
 random: {{random}}
 video: {{site.data.videos.id[random]}}
-list: {{ site.data.videos.id | join: ', '  }}
 </pre>
 
 <div class="player content">

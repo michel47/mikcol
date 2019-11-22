@@ -37,6 +37,7 @@ deepweb-keys.yml
 disasters-keys.yml
 DJ-keys.yml
 docum-keys.yml
+downloaded-keys.yml
 drums-keys.yml
 earthnation-keys.yml
 economy-keys.yml
