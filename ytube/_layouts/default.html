@@ -20,9 +20,9 @@ var list = [ "{{vlist[-1]}}",{% for vid in vlist limit:99 %}"{{vid}}",{%endfor%}
 {{content}}
 </div>
 
-<br><div class="first">
+<br><div class="second">
 {% for vid in site.data.lists[page.list] %}
-{% if vid contains "Qm" %} <a href="http://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
+{% if vid begins "Qm" %} <a href="http://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
 {% else %}<a target="top" href="{{dot}}ytnoad.htm#{{vid}}"><img title="#{{forloop.index}}" alt="{{vid}}" src="https://i.ytimg.com/vi/{{vid}}/default.jpg"></a>{% endif %}{% endfor %}
 </div>
 

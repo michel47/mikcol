@@ -89,6 +89,7 @@ music-keys.yml
 nature-keys.yml
 new-age-keys.yml
 news-keys.yml
+nogafa-keys.yml
 non-manned-keys.yml
 noticed-keys.yml
 not-so-danceable-keys.yml
