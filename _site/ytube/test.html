@@ -1,0 +1,212 @@
+<meta charset="utf8"/>
+<script>
+ var origin = document.location.origin;
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+</script>
+
+
+
+
+<h3>127-keys :</h3>
+QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs, QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG, QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi, QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE
+<ul>
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs>QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs</a>
+
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG>QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG</a>
+
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi>QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi</a>
+
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE>QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE</a>
+
+
+</ul>
+<div id="player1"></div>
+
+<h3>127001-keys :</h3>
+QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG, QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs, QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE, QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi
+<ul>
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG>QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG</a>
+
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs>QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs</a>
+
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE>QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE</a>
+
+
+
+<li>video: <a href=http://gateway.ipfs.io/ipfs/QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi>QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi</a>
+
+
+</ul>
+<div id="player2"></div>
+
+<h3>2gether-keys :</h3>
+5VBSaGz0fnc, 2RCTR5QXaJs, eUiq5_CB7jg, eg4V_STIoOI, vifJ9nvea7g, VgtYe_NnLjo, wwgFvMUGjEE
+<ul>
+
+
+<li>video: <a href=https://youtu.be/5VBSaGz0fnc>5VBSaGz0fnc</a>
+
+
+
+<li>video: <a href=https://youtu.be/2RCTR5QXaJs>2RCTR5QXaJs</a>
+
+
+
+<li>video: <a href=https://youtu.be/eUiq5_CB7jg>eUiq5_CB7jg</a>
+
+
+
+<li>video: <a href=https://youtu.be/eg4V_STIoOI>eg4V_STIoOI</a>
+
+
+</ul>
+<div id="player3"></div>
+
+
+
+<script>
+var player1;
+var player2;
+var player3;
+
+
+function onYouTubeIframeAPIReady() {
+
+
+var list1 = [
+"QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs","QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG","QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi","QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE",'' ];
+player1 = new YT.Player('player1',{
+playerVars: {
+            theme: "light",
+            modestbranding: 1, // No You Tube logo on control bar
+            autoplay: 1,
+            controls: 2,
+            loop: 1,
+            mute: 1,
+            listType: 'list',
+            /*playlist: list1,*/
+            playlist: [ "QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs","QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG","QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi","QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE","" ],
+            enablejsapi: 1,
+            volume: '50%',
+            origin: origin
+},
+events: {
+   'onStateChange': onPlayerStateChange('player1'),
+   'onReady': onPlayerReady(player1,list1)
+          }
+
+});
+
+var list2 = [
+"QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG","QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs","QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE","QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi",'' ];
+player2 = new YT.Player('player2',{
+playerVars: {
+            theme: "light",
+            modestbranding: 1, // No You Tube logo on control bar
+            autoplay: 1,
+            controls: 2,
+            loop: 1,
+            mute: 1,
+            listType: 'list',
+            /*playlist: list2,*/
+            playlist: [ "QmdGNPdkzXbcy7L7HkWyvSWtKPJPrasVnvUJ3kRiFGtvdG","QmQsWxKpxB5rZtk1Uy226uJJRhEPG4aPqjWDHCGCxC5pjs","QmUuitjanCNrikB3Gb5X7VNN6w4AXJPnrMszFmpqHgdKTE","QmYENyUtScsjVJaG2GL2JcdWcooKBczcQ1RwyQo5MY8yoi","" ],
+            enablejsapi: 1,
+            volume: '50%',
+            origin: origin
+},
+events: {
+   'onStateChange': onPlayerStateChange('player2'),
+   'onReady': onPlayerReady(player2,list2)
+          }
+
+});
+
+var list3 = [
+"5VBSaGz0fnc","2RCTR5QXaJs","eUiq5_CB7jg","eg4V_STIoOI","vifJ9nvea7g","VgtYe_NnLjo","wwgFvMUGjEE","zq0vRFOafX4","Ow_Pz4wiqXI","w8RXSZlPSXE","5d8W7NcNLgc","6-MoSk6dB_Y","4khrxcg6Xqs","BAJnkMnOdfs","i2gXoRjeMjc",'' ];
+player3 = new YT.Player('player3',{
+playerVars: {
+            theme: "light",
+            modestbranding: 1, // No You Tube logo on control bar
+            autoplay: 1,
+            controls: 2,
+            loop: 1,
+            mute: 1,
+            listType: 'list',
+            /*playlist: list3,*/
+            playlist: [ "5VBSaGz0fnc","2RCTR5QXaJs","eUiq5_CB7jg","eg4V_STIoOI","vifJ9nvea7g","VgtYe_NnLjo","wwgFvMUGjEE","zq0vRFOafX4","Ow_Pz4wiqXI","w8RXSZlPSXE","5d8W7NcNLgc","6-MoSk6dB_Y","4khrxcg6Xqs","BAJnkMnOdfs","i2gXoRjeMjc","" ],
+            enablejsapi: 1,
+            volume: '50%',
+            origin: origin
+},
+events: {
+   'onStateChange': onPlayerStateChange('player3'),
+   'onReady': onPlayerReady(player3,list3)
+          }
+
+});
+
+}
+
+function onPlayerStateChange(id) {
+   var f = function (event) {
+    changeBorderColor(id,event.data);
+    if (event.data == YT.PlayerState.ENDED) {
+      console.log('ended')
+    } else if (event.data == YT.PlayerState.CUED) {
+      console.log('cued');
+    } else if (event.data = YT.PlayerState.UNSTARTED) {
+      console.log('unstarted');
+    } else {
+      console.log(event)
+    }
+
+   };
+   return f;
+}
+function changeBorderColor(player,playerStatus) {
+    var color;
+    if (playerStatus == -1) {
+      color = "#37474F"; // unstarted = gray
+    } else if (playerStatus == 0) {
+      color = "#FFFF00"; // ended = yellow
+    } else if (playerStatus == 1) {
+      color = "#33FF1E"; // playing = green
+    } else if (playerStatus == 2) {
+      color = "#DD2C00"; // paused = red
+    } else if (playerStatus == 3) {
+      color = "#AA00FF"; // buffering = purple
+    } else if (playerStatus == 5) {
+      color = "#EF6D00"; // video cued = orange
+    }
+    if (color) {
+      document.getElementById(player).style.borderColor = color;
+    }
+}
+
+function onPlayerReady(player,list) {
+ var f = function (event) {
+    player.loadPlaylist({playlist: list});
+ };
+ return f;
+}
+
+
+</script>

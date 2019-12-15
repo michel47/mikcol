@@ -1,0 +1,108 @@
+---
+---
+<meta charset="utf8"/>
+<script>
+ var origin = document.location.origin;
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+</script>
+
+{% if site.data.lists %}
+{% assign sorted = site.data.lists | sort | slice:0,3 %}
+{% for list in sorted %}
+<h3>{{list[0]}} :</h3>
+{{ list[1] | slice:0,7 | join:", " }}
+<ul>
+{% for video in list[1] limit:4 %}
+{% if video contains "Qm" %}
+<li>video: <a href=http://gateway.ipfs.io/ipfs/{{video}}>{{video}}</a>
+{% else %}
+<li>video: <a href=https://youtu.be/{{video}}>{{video}}</a>
+{% endif %}
+{% endfor %}
+</ul>
+<div id="player{{forloop.index}}"></div>
+{% endfor %}
+{% endif %}
+
+<script>
+{% for list in sorted %}var player{{forloop.index}};
+{% endfor %}
+
+function onYouTubeIframeAPIReady() {
+
+{% for list in sorted %}
+var list{{forloop.index}} = [
+{% for vid in list[1] %}"{{vid}}",{%endfor%}'' ];
+player{{forloop.index}} = new YT.Player('player{{forloop.index}}',{
+playerVars: {
+            theme: "light",
+            modestbranding: 1, // No You Tube logo on control bar
+            autoplay: 1,
+            controls: 2,
+            loop: 1,
+            mute: 1,
+            listType: 'list',
+            /*playlist: list{{forloop.index}},*/
+            playlist: [ {% for vid in list[1] %}"{{vid}}",{%endfor%}"" ],
+            enablejsapi: 1,
+            volume: '50%',
+            origin: origin
+},
+events: {
+   'onStateChange': onPlayerStateChange('player{{forloop.index}}'),
+   'onReady': onPlayerReady(player{{forloop.index}},list{{forloop.index}})
+          }
+
+});
+{% endfor %}
+}
+
+function onPlayerStateChange(id) {
+   var f = function (event) {
+    changeBorderColor(id,event.data);
+    if (event.data == YT.PlayerState.ENDED) {
+      console.log('ended')
+    } else if (event.data == YT.PlayerState.CUED) {
+      console.log('cued');
+    } else if (event.data = YT.PlayerState.UNSTARTED) {
+      console.log('unstarted');
+    } else {
+      console.log(event)
+    }
+
+   };
+   return f;
+}
+function changeBorderColor(player,playerStatus) {
+    var color;
+    if (playerStatus == -1) {
+      color = "#37474F"; // unstarted = gray
+    } else if (playerStatus == 0) {
+      color = "#FFFF00"; // ended = yellow
+    } else if (playerStatus == 1) {
+      color = "#33FF1E"; // playing = green
+    } else if (playerStatus == 2) {
+      color = "#DD2C00"; // paused = red
+    } else if (playerStatus == 3) {
+      color = "#AA00FF"; // buffering = purple
+    } else if (playerStatus == 5) {
+      color = "#EF6D00"; // video cued = orange
+    }
+    if (color) {
+      document.getElementById(player).style.borderColor = color;
+    }
+}
+
+function onPlayerReady(player,list) {
+ var f = function (event) {
+    player.loadPlaylist({playlist: list});
+ };
+ return f;
+}
+
+
+</script>
