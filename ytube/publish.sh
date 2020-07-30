@@ -1,6 +1,7 @@
 #
 
 find . -name "*~1" -delete
+bundle update
 jekyll build
 eval $(cat _data/ipfs.yml | eyml)
 pv=$qm

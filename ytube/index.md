@@ -1,6 +1,7 @@
 ---
 layout: default
 list: references-keys
+description: statically generated ytube playlists (jekyll)
 ---
 {% assign hours= site.time | date: "%H" | plus: 137 %}
 {% if site.data.list %}
