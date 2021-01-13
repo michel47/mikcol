@@ -26,6 +26,7 @@ classes-keys.yml
 classical-keys.yml
 classic-keys.yml
 climate-keys.yml
+coding-keys.yml
 conspiracy-keys.yml
 corruption-keys.yml
 cortinas-keys.yml
@@ -65,6 +66,7 @@ hard-keys.yml
 healing-keys.yml
 hippies-keys.yml
 humans-keys.yml
+ilike-keys.yml
 ipfs-keys.yml
 IRMO-keys.yml
 kids-keys.yml
@@ -73,6 +75,7 @@ listen-later-keys.yml
 loveburn2018-keys.yml
 love-keys.yml
 m4gc-keys.yml
+maths-keys.yml
 medit-keys.yml
 meme-keys.yml
 memo-keys.yml
@@ -87,6 +90,7 @@ mobilapp-keys.yml
 movies-keys.yml
 music-90s-keys.yml
 music-keys.yml
+music-rocks-keys.yml
 nature-keys.yml
 new-age-keys.yml
 news-keys.yml
@@ -149,6 +153,7 @@ unknown-keys.yml
 volcanos-keys.yml
 water-keys.yml
 weather-keys.yml
+webtech-keys.yml
 wierd-keys.yml
 wistle-blower-keys.yml
 work-keys.yml

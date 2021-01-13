@@ -1,9 +1,11 @@
 
 
 (cd ../_data/lists; ls -1 *-keys.yml) > list.txt
+echo "--- # ytube playlists ..." > ../_data/ytlist.yml
 for f in $(cat list.txt); do
 bn="${f%.*}"
 md="${bn}.md"
+echo "- $bn" >> ../_data/ytube2.yml
 if [ 1 -o ! -e $md ]; then
 echo $md
 cat > $md <<EOF
