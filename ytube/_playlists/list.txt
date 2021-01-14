@@ -9,6 +9,7 @@ ads-keys.yml
 AI-keys.yml
 all-music-keys.yml
 all-tangos-keys.yml
+all-videos-keys.yml
 asc-keys.yml
 attack-keys.yml
 awareness-keys.yml

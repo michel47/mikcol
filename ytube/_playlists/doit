@@ -2,12 +2,15 @@
 
 (cd ../_data/lists; ls -1 *-keys.yml) > list.txt
 echo "--- # ytube playlists ..." > ../_data/ytlist.yml
+echo "--- # all videos lists ..." > allvids.yml
+
 for f in $(cat list.txt); do
 bn="${f%.*}"
 md="${bn}.md"
 echo "- $bn" >> ../_data/ytlist.yml
 if [ 1 -o ! -e $md ]; then
 echo $md
+grep -v '^---' ../_data/lists/$f >> allvids.yml
 cat > $md <<EOF
 --- 
 layout: default
@@ -23,4 +26,6 @@ list: $bn
 EOF
 fi
 done
+perl -S uniq.pl allvids.yml > ../_data/lists/all-videos-keys.yml
+rm allvids.yml
 
