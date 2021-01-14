@@ -17,6 +17,7 @@
 ### {{ lid | plus: 2 }}. list: videos by Thumbs 
 
  * [VideoThumbs](videothumbs.html)
+ * [all videos](videos.html)
 
 {% comment %}
 
