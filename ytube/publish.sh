@@ -8,6 +8,7 @@ pv=$qm
 cd _playlists
 sh doit
 cd ..
+git add _data/list/all-videos-keys.yml
 git add _playlists/
 qm=$(ipfs add -Q -r _site)
 yt=$(ipfs add -Q -w _site/ytnoad.htm _site/style.css)
@@ -21,3 +22,4 @@ yt: $yt
 ...
 EOF
 git add _data/ipfs.yml
+git commit -a
