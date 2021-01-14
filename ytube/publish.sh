@@ -22,4 +22,6 @@ yt: $yt
 ...
 EOF
 git add _data/ipfs.yml
-git commit -a
+msg="$(git diff --minimal -U0)"
+git commit -a -m "$msg on $(date +%D)"
+git push github
