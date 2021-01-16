@@ -22,15 +22,18 @@ broken-keys.yml
 burnman-ish-keys.yml
 burn-out-keys.yml
 capitalism-keys.yml
+channels-keys.yml
 chill-deep-keys.yml
 classes-keys.yml
 classical-keys.yml
 classic-keys.yml
+clickbate-keys.yml
 climate-keys.yml
 coding-keys.yml
 conspiracy-keys.yml
 corruption-keys.yml
 cortinas-keys.yml
+creative-kitchen-keys.yml
 crypto-keys.yml
 cyberwar-keys.yml
 danceable-keys.yml
@@ -47,6 +50,7 @@ energy-keys.yml
 entrepreneur-keys.yml
 environment-keys.yml
 eperel-keys.yml
+fake-keys.yml
 films-keys.yml
 fintech-keys.yml
 fossil-industry-keys.yml

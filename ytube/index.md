@@ -46,3 +46,5 @@ description: statically generated ytube playlists (jekyll)
 ### json :
 
 * [view-later.json](view-later.json)
+* [list-of-videos.json](list-of-videos.json)
+

@@ -22,6 +22,7 @@ yt: $yt
 ...
 EOF
 git add _data/ipfs.yml
+gituser
 msg="$(git diff --minimal -U0)"
-git commit -a -m "$msg on $(date +%D)"
+git commit -a -m "playlist update on $(date +%D):\n$msg"
 git push origin
