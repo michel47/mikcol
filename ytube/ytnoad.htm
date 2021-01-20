@@ -40,6 +40,7 @@ usage: https://{{site.data.ipfs.bafy}}.cf-ipfs.com/#-ar9vsmFhJU
 modulo: {{site.data.videos.id.size}}
 random: {{random}}
 video: {{site.data.videos.id[random]}}
+fragment: <span id=fragment>{{site.data.videos.id[-1]}}</span>
 </pre>
 </div>
 
@@ -48,14 +49,17 @@ video: {{site.data.videos.id[random]}}
 
 <script>
  var origin = document.location.origin;
+ var hash = document.location.hash;
  var fragment
  if (typeof(hash) == 'undefined' || hash == '') {
    fragment = '{{site.data.videos.id[random]}}'
  } else {
    fragment = hash.substring(1);
  }
+ document.getElementById('fragment').innerHTML = fragment;
+
       document.getElementById('query').value = fragment;
-      console.log('fragment: "'+fragment+'" {{random}} : {{videoid}}')
+      console.log(`fragment: "${fragment}"; video[{{random}}] : "{{videoid}}"`)
       var tag = document.createElement('script');
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
