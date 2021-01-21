@@ -48,13 +48,17 @@ fragment: <span id=fragment>{{site.data.videos.id[-1]}}</span>
 </body>
 
 <script>
+ var fragment;
  var origin = document.location.origin;
- var hash = document.location.hash;
- var fragment
- if (typeof(hash) == 'undefined' || hash == '') {
-   fragment = '{{site.data.videos.id[random]}}'
+ console.info('location:',document.location);
+ let hash = document.location.hash;
+ let search = document.location.search;
+ if (typeof(search) != 'undefined' && search != '') {
+   fragment = search.replace(/.*=/,'');
+ } else if (typeof(hash) != 'undefined' && hash != '') {
+   fragment = hash.substring(1).replace(/.*v=/,'');
  } else {
-   fragment = hash.substring(1);
+   fragment = '{{site.data.videos.id[random]}}'
  }
  document.getElementById('fragment').innerHTML = fragment;
 

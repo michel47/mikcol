@@ -61,6 +61,7 @@ fossil-industry-keys.yml
 freedom-keys.yml
 french-keys.yml
 future-keys.yml
+GAFA-keys.yml
 gcbank-keys.yml
 geek-keys.yml
 gender-keys.yml
@@ -77,6 +78,7 @@ health-keys.yml
 hippies-keys.yml
 humans-keys.yml
 ilike-keys.yml
+interviews-keys.yml
 ipfs-keys.yml
 IRMO-keys.yml
 kids-keys.yml
@@ -85,6 +87,7 @@ listen-later-keys.yml
 loveburn2018-keys.yml
 love-keys.yml
 m4gc-keys.yml
+marketing-keys.yml
 maths-keys.yml
 medit-keys.yml
 meme-keys.yml

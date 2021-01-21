@@ -23,7 +23,7 @@ var list = [ "{{vlist[-1]}}",{% for vid in vlist limit:99 %}"{{vid}}",{%endfor%}
 <br><div class="second content">
 {% for vid in site.data.lists[page.list] %}
 {% if vid contains "Qm" %} <a href="http://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
-{% else %}<a target="top" href="{{dot}}ytnoad.htm#{{vid}}"><img title="#{{forloop.index}}" alt="{{vid}}" src="https://i.ytimg.com/vi/{{vid}}/default.jpg"></a>{% endif %}{% endfor %}
+{% else %}<a target="top" href="{{dot}}ytnoad.htm?v={{vid}}"><img title="#{{forloop.index}}" alt="{{vid}}" src="https://i.ytimg.com/vi/{{vid}}/default.jpg"></a>{% endif %}{% endfor %}
 </div>
 
 <br><div class="content">
@@ -31,7 +31,7 @@ var list = [ "{{vlist[-1]}}",{% for vid in vlist limit:99 %}"{{vid}}",{%endfor%}
 <ol>
 {% for vid in vlist limit:28 %}
 {% if vid contains "Qm" %}<li> vid: <a href="https://gateway.ipfs.io/ipfs/{{vid}}">{{vid}}</a>
-{% else %}<li> vid: <a href="{{dot}}ytnoad.htm#{{vid}}">{{vid}}</a> (<a target="_ytube" href="https://www.youtube.com/watch?v={{vid}}">yt</a>){% endif %}{% endfor %}
+{% else %}<li> vid: <a href="{{dot}}ytnoad.htm#https://youtube.com/watch?v={{vid}}">{{vid}}</a> (<a target="_ytube" href="https://www.youtube.com/watch?v={{vid}}">yt</a>){% endif %}{% endfor %}
 </ol>
 </div>
 
