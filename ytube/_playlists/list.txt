@@ -70,6 +70,7 @@ gloque-keys.yml
 god-keys.yml
 governance-keys.yml
 gradual-keys.yml
+guitar-music-keys.yml
 gurus-keys.yml
 hackers-keys.yml
 hard-keys.yml
@@ -87,6 +88,7 @@ listen-later-keys.yml
 loveburn2018-keys.yml
 love-keys.yml
 m4gc-keys.yml
+mantra-keys.yml
 marketing-keys.yml
 maths-keys.yml
 medit-keys.yml
@@ -161,6 +163,7 @@ TEDs-keys.yml
 test-keys.yml
 the-rich-keys.yml
 thump-keys.yml
+top-chart-keys.yml
 trance-keys.yml
 transhumanism-keys.yml
 TSwan-keys.yml
@@ -178,6 +181,7 @@ work-music-keys.yml
 workout-music-keys.yml
 world-change-keys.yml
 world-keys.yml
+world-music-keys.yml
 wuotai-keys.yml
 wuotai-music-keys.yml
 yt-keys.yml
