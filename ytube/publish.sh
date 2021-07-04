@@ -26,5 +26,6 @@ gituser
 msg="\n $(git diff --minimal -U0)"
 git commit -a -m "playlist update on $(date +%D):$msg"
 git push origin
-xdg-open https://netlify.com/sites/ytube/deploy
+xdg-open https://app.netlify.com/sites/ytube/deploys
 xdg https://ytube.netlify.com
+holo-git-push
