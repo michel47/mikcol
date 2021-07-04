@@ -170,6 +170,7 @@ volcanos-keys.yml
 water-keys.yml
 weather-keys.yml
 webtech-keys.yml
+wiccan-chant-keys.yml
 wierd-keys.yml
 wistle-blower-keys.yml
 work-keys.yml
