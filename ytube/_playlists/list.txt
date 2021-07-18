@@ -36,6 +36,7 @@ conspiracy-keys.yml
 corona-keys.yml
 corruption-keys.yml
 cortinas-keys.yml
+covid-keys.yml
 creative-kitchen-keys.yml
 crypto-keys.yml
 cyberwar-keys.yml
@@ -133,6 +134,7 @@ removed-keys.yml
 ricetm-keys.yml
 robots-keys.yml
 sacred-keys.yml
+scams-keys.yml
 science-keys.yml
 sci-fi-keys.yml
 security-keys.yml
