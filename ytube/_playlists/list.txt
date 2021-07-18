@@ -19,6 +19,7 @@ birds-keys.yml
 bitcoin-keys.yml
 blockchain-keys.yml
 brainbox-keys.yml
+brain-keys.yml
 broken-keys.yml
 burnman-ish-keys.yml
 burn-out-keys.yml
