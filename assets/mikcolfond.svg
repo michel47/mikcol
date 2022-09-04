@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="122.87027mm"
+   height="141.87836mm"
+   viewBox="0 0 122.87027 141.87836"
+   version="1.1"
+   id="svg947"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs944">
+    <linearGradient
+       xlink:href="#linearGradient1019"
+       id="linearGradient1021"
+       x1="3.321104"
+       y1="470.396"
+       x2="248.23047"
+       y2="245.4931"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.26458333,0,0,0.26458333,33.923273,19.150385)" />
+    <linearGradient
+       id="linearGradient1019">
+      <stop
+         style="stop-color:#800080;stop-opacity:0.3"
+         offset="0"
+         id="stop1015" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.6"
+         offset="1"
+         id="stop1017" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-15.630033,-52.224326)">
+    <path
+       style="display:inline;fill:url(#linearGradient1021);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.865;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path846"
+       d="M 138.0678,158.38339 77.065165,193.60328 16.062533,158.38339 V 87.94362 L 77.065165,52.723734 138.0678,87.94362 Z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.8167px;line-height:1.25;font-family:'Alex Brush';-inkscape-font-specification:'Alex Brush, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       id="text5051"><textPath
+         xlink:href="#path12598"
+         id="textPath13307">The MikCol Cell</textPath></text>
+    <ellipse
+       style="display:inline;fill:#ffffff;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5999"
+       cx="60.478596"
+       cy="107.90237"
+       rx="14.862494"
+       ry="14.535222" />
+    <path
+       style="display:none;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 32.394156,156.29322 c 30.112473,0.23141 62.782676,23.64185 91.260284,0.49275"
+       id="path12598" />
+    <path
+       style="display:none;fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 31.59496,92.401462 c 31.211428,-8.55679 68.48941,-13.48155 91.59523,0.29618"
+       id="path21601" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.1694px;line-height:1.25;font-family:'Alex Brush';-inkscape-font-specification:'Alex Brush, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       id="text25504"
+       transform="translate(-0.47863748,-1.8610374)"><textPath
+         xlink:href="#path21601"
+         startOffset="50%"
+         id="textPath31140"><tspan
+           id="tspan25502"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.1694px;font-family:'Alex Brush';-inkscape-font-specification:'Alex Brush, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;stroke-width:0.264583">Fondamentals</tspan></textPath></text>
+  </g>
+</svg>
